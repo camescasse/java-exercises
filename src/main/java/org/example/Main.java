@@ -1,13 +1,14 @@
 package org.example;
 
-import org.example.Classes.Post;
+import org.example.Classes.Stack;
 
 public class Main {
     public static void main(String[] args) {
-        var post1 = new Post("the title indeed", "most descriptive description");
-        post1.upVote();
-        post1.upVote();
-        post1.downVote();
-        System.out.println(post1);
+        var stack = new Stack<>();
+        stack.push(1);
+        stack.push("second");
+        stack.push(true);
+        System.out.println(stack.pop());
+        System.out.println(stack.getItems());
     }
 }

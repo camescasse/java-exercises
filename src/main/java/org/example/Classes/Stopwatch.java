@@ -1,10 +1,10 @@
 package org.example.Classes;
 
 public class Stopwatch {
-    boolean running;
-    long startTime;
-    long endTime;
-    long duration;
+    private boolean running;
+    private long startTime;
+    private long endTime;
+    private long duration;
 
     public Stopwatch() {
         this.running = false;
