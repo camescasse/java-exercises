@@ -1,19 +1,18 @@
 package org.example;
 
-import org.example.Inheritance.FirePokemon;
-import org.example.Inheritance.WaterPokemon;
+import org.example.Polymorfism.FileExporter.Document;
+import org.example.Polymorfism.FileExporter.PdfExporter;
+import org.example.Polymorfism.FileExporter.TxtExporter;
+import org.example.Polymorfism.FileExporter.WordExporter;
 
 public class Main {
     public static void main(String[] args) {
-        var mudkip = new WaterPokemon("Squirtle");
-        System.out.println(mudkip);
-        mudkip.levelUp();
-        System.out.println(mudkip);
-        mudkip.attack();
-        var torchic = new FirePokemon("Torchic");
-        System.out.println(torchic);
-        torchic.levelUp();
-        System.out.println(torchic);
-        torchic.attack();
+    var document = new Document("employees.doc");
+    var pdfExporter = new PdfExporter();
+    pdfExporter.export(document);
+    var txtExporter = new TxtExporter();
+    txtExporter.export(document);
+    var wordExporter = new WordExporter();
+    wordExporter.export(document);
     }
 }
