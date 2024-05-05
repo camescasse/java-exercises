@@ -7,7 +7,7 @@ public class Stack<T> {
     private final List<T> items = new ArrayList<>();
 
     public void push(T item) {
-    items.add(item);
+        items.add(item);
     }
 
     public T pop() {
@@ -16,6 +16,10 @@ public class Stack<T> {
 
     public List<T> getItems() {
         return items;
+    }
+
+    public T peek() {
+        return items.getLast();
     }
 
 }
