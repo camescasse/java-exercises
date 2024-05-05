@@ -13,8 +13,7 @@ public abstract class Pokemon {
         level++;
     }
 
-    public void attack() {
-    }
+    public abstract void attack();
 
     @Override
     public String toString() {
