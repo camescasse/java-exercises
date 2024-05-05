@@ -1,6 +1,6 @@
 package org.example.Polymorfism.FileExporter;
 
-public class WordExporter implements Exporter {
+public class DocxExporter implements Exporter {
 
     @Override
     public void export(Document document) {

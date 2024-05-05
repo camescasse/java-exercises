@@ -1,7 +1,7 @@
 package org.example.Polymorfism.FileExporter;
 
 public class Document {
-    String name;
+    private final String name;
 
     public Document(String name) {
         this.name = name;
