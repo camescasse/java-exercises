@@ -1,18 +1,33 @@
 package org.example;
 
-import org.example.Polymorfism.FileExporter.Document;
-import org.example.Polymorfism.FileExporter.PdfExporter;
-import org.example.Polymorfism.FileExporter.TxtExporter;
-import org.example.Polymorfism.FileExporter.WordExporter;
+import org.example.Polymorfism.RPG.Archer;
+import org.example.Polymorfism.RPG.Warrior;
+import org.example.Polymorfism.RPG.Wizard;
 
 public class Main {
     public static void main(String[] args) {
-    var document = new Document("employees.doc");
-    var pdfExporter = new PdfExporter();
-    pdfExporter.export(document);
-    var txtExporter = new TxtExporter();
-    txtExporter.export(document);
-    var wordExporter = new WordExporter();
-    wordExporter.export(document);
+        var thor = new Warrior("Thor");
+        var han = new Warrior("Han");
+        thor.performAttack(han);
+        thor.performSpecial(thor);
+        thor.performAttack(han);
+        System.out.println(han);
+        thor.move();
+
+        var harry = new Wizard("Harry");
+        harry.performSpecial(han);
+        harry.performSpecial(han);
+        harry.performSpecial(han);
+        harry.performSpecial(han);
+        harry.performSpecial(han);
+        System.out.println(harry);
+        harry.performSpecial(han);
+        harry.performAttack(han);
+        System.out.println(han);
+
+        var legolas = new Archer("Legolas");
+        legolas.performAttack(han);
+        legolas.move();
+        System.out.println(han);
     }
 }
